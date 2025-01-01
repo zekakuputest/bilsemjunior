@@ -31,43 +31,42 @@
         }
 
         .folder-container {
-    display: grid; /* Izgara düzeni kullanılıyor */
-    grid-template-columns: repeat(3, 1fr); /* 3 sütun */
-    gap: 20px; /* Klasörler arasındaki boşluk */
-    padding: 20px;
-    margin: auto;
-    max-width: 800px; /* Maksimum genişlik */
-}
+            display: grid; /* Use grid for layout */
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+            gap: 20px; /* Space between items */
+            padding: 20px;
+            margin: auto;
+            max-width: 800px; /* Set a maximum width for better layout */
+        }
 
-.folder {
-    height: 120px;
-    position: relative;
-    cursor: pointer;
-    text-align: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: folderMove 3s infinite ease-in-out;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
+        .folder {
+            height: 120px;
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: folderMove 3s infinite ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
 
-.folder img {
-    width: 80px; /* Görsel genişliği */
-    height: 80px; /* Görsel yüksekliği */
-}
+        .folder img {
+            width: 80px; /* Adjusted for tablet view */
+            height: 80px; /* Adjusted for tablet view */
+        }
 
-.folder:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
+        .folder:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
 
-.title {
-    font-weight: bold;
-    margin-top: 5px;
-    font-size: 14px;
-}
-@media (max-width: 768px) {
+        .title {
+            font-weight: bold;
+            margin-top: 5px;
+            font-size: 14px;
+        }
 
         .activity-count {
             position: absolute;
