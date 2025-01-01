@@ -1,96 +1,168 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilsem Junior - Kullanım Koşulları</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
 
-**Bilsem Junior** uygulamasını kullanmadan önce lütfen bu Kullanım Koşulları’nı dikkatlice okuyunuz. Uygulama ve hizmetlerimizi kullanarak bu koşulları kabul ettiğinizi beyan etmiş olursunuz. Eğer bu şartları kabul etmiyorsanız, uygulamamızı kullanmaktan vazgeçmelisiniz.
+        header {
+            background-color: #f78c42;
+            text-align: center;
+            padding: 20px 0;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            border-bottom: 5px solid #e66f29;
+        }
 
----
+        main {
+            padding: 30px;
+            text-align: left;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-#### 1. **Genel Koşullar**
-1.1. **Sözleşmenin Tarafları:**  
-Bu Kullanım Koşulları, **Bilsem Junior** uygulaması ile kullanıcılar arasında bağlayıcı bir sözleşme oluşturur.  
-1.2. **Koşulların Kabulü:**  
-Uygulamayı indirerek, kurarak veya kullanarak bu şartları okuduğunuzu, anladığınızı ve kabul ettiğinizi onaylamış olursunuz.  
-1.3. **Koşulların Güncellenmesi:**  
-Bilsem Junior, bu koşulları önceden bildirimde bulunmaksızın değiştirme hakkını saklı tutar. Güncellenmiş koşullar uygulama üzerinden duyurulur ve kullanıcıların devam eden kullanımı, bu değişiklikleri kabul ettiği anlamına gelir.  
+        h2, h3 {
+            color: #f78c42;
+        }
 
----
+        h2 {
+            font-size: 30px;
+        }
 
-#### 2. **Uygulama Kullanımı**
-2.1. **Hizmetlerin Kapsamı:**  
-Uygulama, kullanıcıların eğitim süreçlerini desteklemek amacıyla çeşitli özellikler sunar. Ancak bu hizmetlerin her zaman kesintisiz ve hatasız olacağı garanti edilmez.  
-2.2. **Kullanıcı Yaşı:**  
-Uygulama, genel olarak tüm yaş gruplarına uygundur ancak 13 yaşın altındaki çocukların uygulamayı kullanabilmesi için ebeveyn veya veli izni gereklidir.  
-2.3. **Hesap Oluşturma:**  
-Uygulamaya erişmek için doğru ve güncel bilgilerle bir hesap oluşturmanız gerekmektedir. Yanıltıcı bilgi veren kullanıcıların hesapları kapatılabilir.  
-2.4. **Hesap Güvenliği:**  
-Hesabınızın güvenliğini sağlamak sizin sorumluluğunuzdadır. Şifrenizi gizli tutmalı ve yetkisiz kişilerin hesabınıza erişimini engellemelisiniz.  
+        h3 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
 
----
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
 
-#### 3. **Kullanıcı Yükümlülükleri**
-3.1. **Yasalara Uygun Kullanım:**  
-Uygulama, yalnızca yasalara uygun ve iyi niyetle kullanılabilir. Aşağıdaki davranışlar kesinlikle yasaktır:  
-- Uygulamanın kötüye kullanımı, hackleme veya virüs yayma.  
-- Uygulama içeriğini kopyalama, yeniden satma veya ticari amaçlarla kullanma.  
-- Başkalarının kişisel bilgilerini izinsiz toplama veya kötüye kullanma.  
-3.2. **Doğruluk ve Uygunluk:**  
-Kullanıcılar, sağladıkları tüm bilgilerin doğru, güncel ve eksiksiz olduğunu taahhüt eder. Yanıltıcı veya uygunsuz içerikler paylaşan kullanıcıların hesapları durdurulabilir veya kapatılabilir.  
+        ul {
+            font-size: 18px;
+            color: #555;
+            padding-left: 20px;
+        }
 
----
+        footer {
+            background-color: #f78c42;
+            text-align: center;
+            padding: 15px;
+            color: white;
+            font-size: 18px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
 
-#### 4. **Fikri Mülkiyet Hakları**
-4.1. **Uygulama İçeriği:**  
-Bilsem Junior uygulamasındaki tüm içerikler (metin, görseller, yazılımlar, marka ve logolar), telif hakkı ve diğer fikri mülkiyet yasalarıyla korunmaktadır. Kullanıcılar, bu içerikleri izinsiz çoğaltamaz, dağıtamaz veya ticari amaçlarla kullanamaz.  
-4.2. **Kullanıcı İçerikleri:**  
-Kullanıcıların uygulama üzerinden paylaştığı içerikler, kullanıcıların sorumluluğundadır. Uygulama, kullanıcı içeriklerini yayınlama veya kaldırma hakkını saklı tutar.  
+    <header>
+        Bilsem Junior - Kullanım Koşulları
+    </header>
 
----
+    <main>
+        <h2>1. Genel Koşullar</h2>
+        <h3>1.1. Sözleşmenin Tarafları:</h3>
+        <p>Bu Kullanım Koşulları, <strong>Bilsem Junior</strong> uygulaması ile kullanıcılar arasında bağlayıcı bir sözleşme oluşturur.</p>
 
-#### 5. **Ücretlendirme ve Abonelik**
-5.1. **Ücretsiz ve Ücretli Hizmetler:**  
-Bilsem Junior, hem ücretsiz hem de ücretli özellikler sunabilir. Ücretli hizmetler için ödeme bilgilerinizi doğru sağlamanız gerekir.  
-5.2. **Abonelik İptali:**  
-Aboneliğinizi istediğiniz zaman iptal edebilirsiniz. Ancak, iptal edilen abonelikler için geri ödeme yapılmaz.  
+        <h3>1.2. Koşulların Kabulü:</h3>
+        <p>Uygulamayı indirerek, kurarak veya kullanarak bu şartları okuduğunuzu, anladığınızı ve kabul ettiğinizi onaylamış olursunuz.</p>
 
----
+        <h3>1.3. Koşulların Güncellenmesi:</h3>
+        <p>Bilsem Junior, bu koşulları önceden bildirimde bulunmaksızın değiştirme hakkını saklı tutar. Güncellenmiş koşullar uygulama üzerinden duyurulur ve kullanıcıların devam eden kullanımı, bu değişiklikleri kabul ettiği anlamına gelir.</p>
 
-#### 6. **Sorumluluk Reddi**
-6.1. **Kesintisiz Hizmet Garantisi:**  
-Bilsem Junior, hizmetlerin kesintisiz, hatasız veya belirli bir amaca uygun olacağını garanti etmez. Uygulamanın performansı teknik sorunlar nedeniyle aksayabilir.  
-6.2. **Üçüncü Taraf İçerikleri:**  
-Uygulama, üçüncü taraf bağlantıları veya içerikleri içerebilir. Bu bağlantılar üzerinden gerçekleştirilen işlemlerden Bilsem Junior sorumlu değildir.  
+        <h2>2. Uygulama Kullanımı</h2>
+        <h3>2.1. Hizmetlerin Kapsamı:</h3>
+        <p>Uygulama, kullanıcıların eğitim süreçlerini desteklemek amacıyla çeşitli özellikler sunar. Ancak bu hizmetlerin her zaman kesintisiz ve hatasız olacağı garanti edilmez.</p>
 
----
+        <h3>2.2. Kullanıcı Yaşı:</h3>
+        <p>Uygulama, genel olarak tüm yaş gruplarına uygundur ancak 13 yaşın altındaki çocukların uygulamayı kullanabilmesi için ebeveyn veya veli izni gereklidir.</p>
 
-#### 7. **Hesap Dondurma veya Sonlandırma**
-7.1. **İhlaller:**  
-Kullanıcılar, bu Kullanım Koşulları’nı ihlal ettikleri takdirde hesapları uyarı olmaksızın dondurulabilir veya sonlandırılabilir.  
-7.2. **Kendi İsteğiyle Sonlandırma:**  
-Kullanıcılar istedikleri zaman hesaplarını silebilir. Ancak, hesabın silinmesiyle birlikte tüm verilere erişim kaybedilecektir.  
+        <h3>2.3. Hesap Oluşturma:</h3>
+        <p>Uygulamaya erişmek için doğru ve güncel bilgilerle bir hesap oluşturmanız gerekmektedir. Yanıltıcı bilgi veren kullanıcıların hesapları kapatılabilir.</p>
 
----
+        <h3>2.4. Hesap Güvenliği:</h3>
+        <p>Hesabınızın güvenliğini sağlamak sizin sorumluluğunuzdadır. Şifrenizi gizli tutmalı ve yetkisiz kişilerin hesabınıza erişimini engellemelisiniz.</p>
 
-#### 8. **Gizlilik ve Veri Koruma**
-8.1. **Gizlilik Politikası:**  
-Kişisel verilerinizin nasıl toplandığı, kullanıldığı ve korunduğuyla ilgili bilgiler, [Gizlilik Politikası](#) sayfamızda yer almaktadır.  
-8.2. **Veri Paylaşımı:**  
-Kullanıcı verileri, yalnızca yasal zorunluluklar veya kullanıcı izni doğrultusunda paylaşılır.  
+        <h2>3. Kullanıcı Yükümlülükleri</h2>
+        <h3>3.1. Yasalara Uygun Kullanım:</h3>
+        <p>Uygulama, yalnızca yasalara uygun ve iyi niyetle kullanılabilir. Aşağıdaki davranışlar kesinlikle yasaktır:</p>
+        <ul>
+            <li>Uygulamanın kötüye kullanımı, hackleme veya virüs yayma.</li>
+            <li>Uygulama içeriğini kopyalama, yeniden satma veya ticari amaçlarla kullanma.</li>
+            <li>Başkalarının kişisel bilgilerini izinsiz toplama veya kötüye kullanma.</li>
+        </ul>
 
----
+        <h3>3.2. Doğruluk ve Uygunluk:</h3>
+        <p>Kullanıcılar, sağladıkları tüm bilgilerin doğru, güncel ve eksiksiz olduğunu taahhüt eder. Yanıltıcı veya uygunsuz içerikler paylaşan kullanıcıların hesapları durdurulabilir veya kapatılabilir.</p>
 
-#### 9. **Uyuşmazlıkların Çözümü**
-9.1. **Geçerli Hukuk:**  
-Bu Kullanım Koşulları, Türkiye Cumhuriyeti yasalarına tabidir.  
-9.2. **Çözüm Yöntemleri:**  
-Herhangi bir uyuşmazlık durumunda öncelikle dostane çözüm yolları aranır. Anlaşmazlık devam ederse Trabzon Mahkemeleri yetkili kılınmıştır.  
+        <h2>4. Fikri Mülkiyet Hakları</h2>
+        <h3>4.1. Uygulama İçeriği:</h3>
+        <p>Bilsem Junior uygulamasındaki tüm içerikler (metin, görseller, yazılımlar, marka ve logolar), telif hakkı ve diğer fikri mülkiyet yasalarıyla korunmaktadır. Kullanıcılar, bu içerikleri izinsiz çoğaltamaz, dağıtamaz veya ticari amaçlarla kullanamaz.</p>
 
----
+        <h3>4.2. Kullanıcı İçerikleri:</h3>
+        <p>Kullanıcıların uygulama üzerinden paylaştığı içerikler, kullanıcıların sorumluluğundadır. Uygulama, kullanıcı içeriklerini yayınlama veya kaldırma hakkını saklı tutar.</p>
 
-#### 10. **Değişiklik ve Bildirimler**
-10.1. **Koşulların Güncellenmesi:**  
-Bilsem Junior, bu Kullanım Koşulları’nı değiştirme hakkını saklı tutar. Önemli değişiklikler uygulama üzerinden duyurulacaktır.  
-10.2. **Bildirim Yöntemleri:**  
-Bildirimler e-posta, uygulama içi bildirim veya web sitesi üzerinden yapılabilir.  
+        <h2>5. Ücretlendirme ve Abonelik</h2>
+        <h3>5.1. Ücretsiz ve Ücretli Hizmetler:</h3>
+        <p>Bilsem Junior, hem ücretsiz hem de ücretli özellikler sunabilir. Ücretli hizmetler için ödeme bilgilerinizi doğru sağlamanız gerekir.</p>
 
----
+        <h3>5.2. Abonelik İptali:</h3>
+        <p>Aboneliğinizi istediğiniz zaman iptal edebilirsiniz. Ancak, iptal edilen abonelikler için geri ödeme yapılmaz.</p>
 
-#### 11. **İletişim**
-Bu Kullanım Koşulları hakkında sorularınız veya geri bildirimleriniz için bizimle **zekakupu.test@gmail.com** adresinden iletişime geçebilirsiniz.
+        <h2>6. Sorumluluk Reddi</h2>
+        <h3>6.1. Kesintisiz Hizmet Garantisi:</h3>
+        <p>Bilsem Junior, hizmetlerin kesintisiz, hatasız veya belirli bir amaca uygun olacağını garanti etmez. Uygulamanın performansı teknik sorunlar nedeniyle aksayabilir.</p>
+
+        <h3>6.2. Üçüncü Taraf İçerikleri:</h3>
+        <p>Uygulama, üçüncü taraf bağlantıları veya içerikleri içerebilir. Bu bağlantılar üzerinden gerçekleştirilen işlemlerden Bilsem Junior sorumlu değildir.</p>
+
+        <h2>7. Hesap Dondurma veya Sonlandırma</h2>
+        <h3>7.1. İhlaller:</h3>
+        <p>Kullanıcılar, bu Kullanım Koşulları’nı ihlal ettikleri takdirde hesapları uyarı olmaksızın dondurulabilir veya sonlandırılabilir.</p>
+
+        <h3>7.2. Kendi İsteğiyle Sonlandırma:</h3>
+        <p>Kullanıcılar istedikleri zaman hesaplarını silebilir. Ancak, hesabın silinmesiyle birlikte tüm verilere erişim kaybedilecektir.</p>
+
+        <h2>8. Gizlilik ve Veri Koruma</h2>
+        <h3>8.1. Gizlilik Politikası:</h3>
+        <p>Kişisel verilerinizin nasıl toplandığı, kullanıldığı ve korunduğuyla ilgili bilgiler, <a href="#">Gizlilik Politikası</a> sayfamızda yer almaktadır.</p>
+
+        <h3>8.2. Veri Paylaşımı:</h3>
+        <p>Kullanıcı verileri, yalnızca yasal zorunluluklar veya kullanıcı izni doğrultusunda paylaşılır.</p>
+
+        <h2>9. Uyuşmazlıkların Çözümü</h2>
+        <h3>9.1. Geçerli Hukuk:</h3>
+        <p>Bu Kullanım Koşulları, Türkiye Cumhuriyeti yasalarına tabidir.</p>
+
+        <h3>9.2. Çözüm Yöntemleri:</h3>
+        <p>Herhangi bir uyuşmazlık durumunda öncelikle dostane çözüm yolları aranır. Anlaşmazlık devam ederse Trabzon Mahkemeleri yetkili kılınmıştır.</p>
+
+        <h2>10. Değişiklik ve Bildirimler</h2>
+        <h3>10.1. Koşulların Güncellenmesi:</h3>
+        <p>Bilsem Junior, bu Kullanım Koşulları’nı değiştirme hakkını saklı tutar. Önemli değişiklikler uygulama üzerinden duyurulacaktır.</p>
+
+        <h3>10.2. Bildirim Yöntemleri:</h3>
+        <p>Bildirimler e-posta, uygulama içi bildirim veya web sitesi üzerinden yapılabilir.</p>
+
+        <h2>11. İletişim</h2>
+        <p>Bu Kullanım Koşulları hakkında sorularınız veya geri bildirimleriniz için bizimle <a href="mailto:zekakupu.test@gmail.com">zekakupu.test@gmail.com</a> adresinden iletişime geçebilirsiniz.</p>
+    </main>
+
+    <footer>
+        © 2025 Bilsem Junior. Tüm Hakları Saklıdır.
+    </footer>
+
+</body>
+</html>
