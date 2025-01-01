@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilsem Sınavları</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            color: #4CAF50;
+            padding: 30px 0;
+            font-size: 28px;
+            animation: swing 2s infinite ease-in-out;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        @keyframes swing {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(3deg); }
+        }
+
+        .folder-container {
+            display: grid; /* Use grid for layout */
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+            gap: 20px; /* Space between items */
+            padding: 20px;
+            margin: auto;
+            max-width: 800px; /* Set a maximum width for better layout */
+        }
+
+        .folder-container {
+    display: grid; /* Izgara düzeni kullanılıyor */
+    grid-template-columns: repeat(3, 1fr); /* 3 sütun */
+    gap: 20px; /* Klasörler arasındaki boşluk */
+    padding: 20px;
+    margin: auto;
+    max-width: 800px; /* Maksimum genişlik */
+}
+
+.folder {
+    height: 120px;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: folderMove 3s infinite ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.folder img {
+    width: 80px; /* Görsel genişliği */
+    height: 80px; /* Görsel yüksekliği */
+}
+
+.folder:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+    font-weight: bold;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+
+        .activity-count {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #FF9800;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        @keyframes folderMove {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+        }
+
+        .back-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            cursor: pointer;
+            animation: shake 1s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-3px); }
+            75% { transform: translateX(3px); }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .exam-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .exam-list li {
+            margin: 10px 0;
+        }
+
+        .exam-list button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-list button:hover {
+            transform: scale(1.05);
+        }
+
+        .exam-list img {
+            width: 40px; /* Adjusted for tablet view */
+            height: 40px; /* Adjusted for tablet view */
+            margin-right: 10px;
+        }
+
+        .iframe-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="pageTitle">4. Sınıf</h1>
+
+    <div class="folder-container" id="sectionList">
+        <div class="folder" data-section="shapeClassification">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">1-Şekil Sınıflandırma</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="shapeAnalysis">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">2-Şekil Matrisi</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="numberSeries">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">3-Sayı Serisi</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="imageClassification">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">4-Sayı Analojisi</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="imageAnalogy">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">5-Kağıt Katlama</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="numberAnalogy">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">6-Sayı Analojisi</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="numberPuzzle">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">7-Sayı Bulmacası</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="paperFolding">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">8-Kağıt Katlama</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="mathematicalOperations">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">9-Matamatiksel İşlemler</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="geometricShapes">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">10-Geometrik Şekiller</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="spatialRelations">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">11-Uzamsal İlişkiler</div>
+            <div class="activity-count">0 etkinlik</div>
+         </div>
+         <div class="folder" data-section="physicalProperties">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">12-Fiziksel Özellikler</div>
+            <div class="activity-count">0 etkinlik</div>
+          </div>
+          <div class="folder" data-section="livingThings">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">13-Canlılar</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="visualSimilarity">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">14-Görselde Benzerlik</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="findDifferentImage">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">15-Farklı Resmi Bul</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+    </div>
+
+    <div id="examSection" class="hidden">
+        <img class="back-button" src="https://img.icons8.com/fluency/48/back.png" alt="Geri Dön" onclick="goBack()">
+        <ul class="exam-list" id="examList"></ul>
+    </div>
+
+    <div class="iframe-container hidden" id="iframeContainer">
+        <img class="back-button" src="https://img.icons8.com/fluency/48/back.png" alt="Geri Dön" onclick="goBack()">
+        <iframe id="examFrame" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <audio id="clickSound" src="https://www.soundjay.com/buttons/sounds/button-3.wav" preload="auto"></audio>
+
+    <script>
+        const exams = {
+                         shapeClassification: [
+		{ name: "1", url: "https://wordwall.net/tr/embed/5a77523cb8be4ca9b52f261c01afa04b?themeId=50&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/0d9107ef3b5e407e98c437e93853b90a?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/4bc7e6bebf6140eeaccfd37240cca0eb?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/0df80c8dd8da4d37888b9421f77a336f?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+        { name: "5", url: "https://wordwall.net/tr/embed/b8ffee559bf141688763efa64e38d524?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            ],
+            shapeAnalysis: [
+                { name: "1", url: "https://wordwall.net/tr/embed/e2c3fcd207554b688056be59f84787ba?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+	        { name: "2", url: "https://wordwall.net/tr/embed/752c20485c9146cba73415d1be65776a?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/b349bd91e33e4fa0a9d7d9220b765549?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/3b46e66ff6d94931acefe6caf5348a5d?themeId=44&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "5", url: "https://wordwall.net/tr/embed/14708aebd0754725a9c15de092626101?themeId=56&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            ],
+            numberSeries: [
+                { name: "1", url: "https://wordwall.net/tr/embed/c9f5d4ead2c24d7a8e97fc3357ec7db1?themeId=23&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/387e003589474a0887213d70a81e6fdb?themeId=60&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/a20f662b9bf243ec9a431c5a2bba5e30?themeId=46&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/107329544bc74eaa8625c82a2ba9299c?themeId=27&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "5", url: "https://wordwall.net/tr/embed/14dd3e115b794f0ab671a024b3b1f7b2?themeId=50&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+        { name: "6", url: "https://wordwall.net/tr/embed/9379d7561b8d453f9b658c50b890021b?themeId=43&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            ],
+            imageClassification: [
+                { name: "1", url: "https://wordwall.net/tr/embed/523111397b1d450d8b60139ee72df21d?themeId=2&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/241cfac7efa54453891e3c7d0b9c0cd7?themeId=60&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/922eccc75b884a5790ff9f132ec9db02?themeId=54&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/37355015c0544148a0ccb50fdf59bdea?themeId=22&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+        { name: "5", url: "https://wordwall.net/tr/embed/0abade8c51754c9e9f42ea1f3160ee0f?themeId=49&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            ],
+            imageAnalogy: [
+                { name: "1", url: "https://wordwall.net/tr/embed/3351962f038f41209399e2e1303cc5c7?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/8f38882d47ab4fc4a000dcdde7a57a4f?themeId=44&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/b0ad816a4657404a9a8a763bc1d6c1c8?themeId=53&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/a9d500f952284fc2be0d4a07a77a289a?themeId=56&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+        { name: "4", url: "https://wordwall.net/tr/embed/22b860179d2e460a831787bc52751c15?themeId=41&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+
+            ],
+            numberAnalogy: [
+               
+            ],
+            numberPuzzle: [
+         
+            ],
+            paperFolding: [
+             
+            ],
+            mathematicalOperations: [
+            
+            ],
+            geometricShapes: [
+             
+            ],
+            spatialRelations: [
+            ],
+            physicalProperties: [
+               
+            ],
+            livingThings: [
+              
+            ],
+            visualSimilarity: [
+               
+            ],
+            findDifferentImage: [
+
+            ]
+        };
+
+        const clickSound = document.getElementById('clickSound');
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const folders = document.querySelectorAll('.folder');
+            folders.forEach(folder => {
+                const section = folder.getAttribute('data-section');
+                folder.querySelector('.activity-count').textContent = `${exams[section].length} etkinlik`;
+                folder.addEventListener('click', () => {
+                    playClickSound();  // Ses çalma
+                    showExams(section, folder.querySelector('.title').textContent);
+                });
+            });
+        });
+
+        function playClickSound() {
+            clickSound.currentTime = 0; // Sesin başlangıcına git
+            clickSound.play(); // Sesi oynat
+        }
+
+        function showExams(section, sectionName) {
+            document.getElementById('examList').innerHTML = exams[section]
+                .map(exam => `<li><button onclick="loadExam('${exam.url}')"><img src="${exam.image}" alt="exam-icon">${exam.name}</button></li>`)
+                .join('');
+            document.getElementById('pageTitle').innerHTML = '4. Sınıf <br>' + sectionName; // <br> ile alt satıra geç
+            document.getElementById('sectionList').classList.add('hidden');
+            document.getElementById('examSection').classList.remove('hidden');
+        }
+
+        function loadExam(url) {
+            playClickSound(); // Ses çalma
+            document.getElementById('examFrame').src = url;
+            document.getElementById('examSection').classList.add('hidden');
+            document.getElementById('iframeContainer').classList.remove('hidden');
+        }
+
+        function goBack() {
+            playClickSound(); // Ses çalma
+            if (!document.getElementById('examSection').classList.contains('hidden')) {
+                document.getElementById('examSection').classList.add('hidden');
+                document.getElementById('sectionList').classList.remove('hidden');
+                document.getElementById('pageTitle').textContent = '4. Sınıf';
+            } else {
+                document.getElementById('iframeContainer').classList.add('hidden');
+                document.getElementById('examSection').classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>

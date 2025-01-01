@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilsem Sınavları</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        h1 {
+            color: #4CAF50;
+            padding: 30px 0;
+            font-size: 28px;
+            animation: swing 2s infinite ease-in-out;
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        @keyframes swing {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(3deg); }
+        }
+
+        .folder-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 eşit sütun */
+    gap: 20px;
+    padding: 20px;
+    margin: auto;
+    max-width: 900px; /* Gerekirse genişliği ayarla */
+}
+
+        .folder {
+            height: 120px;
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: folderMove 3s infinite ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .folder img {
+            width: 80px; /* Adjusted for tablet view */
+            height: 80px; /* Adjusted for tablet view */
+        }
+
+        .folder:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .title {
+            font-weight: bold;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .activity-count {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #FF9800;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        @keyframes folderMove {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+        }
+
+        .back-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            cursor: pointer;
+            animation: shake 1s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-3px); }
+            75% { transform: translateX(3px); }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .exam-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .exam-list li {
+            margin: 10px 0;
+        }
+
+        .exam-list button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-list button:hover {
+            transform: scale(1.05);
+        }
+
+        .exam-list img {
+            width: 40px; /* Adjusted for tablet view */
+            height: 40px; /* Adjusted for tablet view */
+            margin-right: 10px;
+        }
+
+        .iframe-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="pageTitle">1. Sınıf</h1>
+
+    <div class="folder-container" id="sectionList">
+        <div class="folder" data-section="shapeClassification">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">1-Şekil Sınıflandırma</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="shapeAnalysis">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">2-Şekil Analizi</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="numberSeries">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">3-Sayı Serisi</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="imageClassification">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">4-Resim Sınıflandırma</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="imageAnalogy">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">5-Resim Analojisi</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="numberAnalogy">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">6-Sayı Analojisi</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="numberPuzzle">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">7-Sayı Bulmacası</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="paperFolding">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">8-Kağıt Katlama</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="mathematicalOperations">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">9-Matamatiksel İşlemler</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="geometricShapes">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">10-Geometrik Şekiller</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="spatialRelations">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">11-Uzamsal İlişkiler</div>
+            <div class="activity-count">0 etkinlik</div>
+         </div>
+         <div class="folder" data-section="physicalProperties">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">12-Fiziksel Özellikler</div>
+            <div class="activity-count">0 etkinlik</div>
+          </div>
+          <div class="folder" data-section="livingThings">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">13-Canlılar</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="visualSimilarity">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">14-Görselde Benzerlik</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="findDifferentImage">
+            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <div class="title">15-Farklı Resmi Bul</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+    </div>
+
+    <div id="examSection" class="hidden">
+        <img class="back-button" src="https://img.icons8.com/fluency/48/back.png" alt="Geri Dön" onclick="goBack()">
+        <ul class="exam-list" id="examList"></ul>
+    </div>
+
+    <div class="iframe-container hidden" id="iframeContainer">
+        <img class="back-button" src="https://img.icons8.com/fluency/48/back.png" alt="Geri Dön" onclick="goBack()">
+        <iframe id="examFrame" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <audio id="clickSound" src="https://www.soundjay.com/buttons/sounds/button-3.wav" preload="auto"></audio>
+
+    <script>
+        const exams = {
+                         shapeClassification: [
+		{ name: "1", url: "https://wordwall.net/tr/embed/c1a1b62c84bc4ae786cb5e23c7590768?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/3a76c54633e740f5ad8f36f36dcf11a3?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/130c3e5337fe42fda0b2efb44fc09475?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/201687641cd84d3da64969fa9ccd5c87?themeId=64&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            ],
+            shapeAnalysis: [
+                { name: "1", url: "https://wordwall.net/tr/embed/f1d98c33fd504217aa59fda3ad64c2ba?themeId=44&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+	        { name: "2", url: "https://wordwall.net/tr/embed/a30ddb5ffed14bb7a2d005f8225bd637?themeId=44&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/dd39641703dc47bd800952ec22dd8c37?themeId=44&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/9c799a84783c436eb5c64df344b47c15?themeId=44&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "5", url: "https://wordwall.net/tr/embed/2bbe05858d954a56a87bec6527a4e01b?themeId=44&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            ],
+            numberSeries: [
+                { name: "1", url: "https://wordwall.net/tr/embed/1639598340a040fd9619d3ad923d791d?themeId=56&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/f6ade9391375474aa8c07d45a8217be3?themeId=56&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/f67f1934b81f4b4495aefa8c41433963?themeId=56&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/0ffe57b3a2684550894ea8ffc7f39c63?themeId=56&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "5", url: "https://wordwall.net/tr/embed/6d58396d638549dd87b4a89bd612ac8e?themeId=56&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            ],
+            imageClassification: [
+                { name: "1", url: "https://wordwall.net/tr/embed/fd842b5c1c38442995a2038fcba3781c?themeId=46&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/dd5028d6e35c4aadbc8fc84564b71581?themeId=46&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/306de65edec048e0975651b2b07a2412?themeId=46&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/f053b43d1c5d4ee8a2dbbdde7f076552?themeId=46&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            ],
+            imageAnalogy: [
+                { name: "1", url: "https://wordwall.net/tr/embed/978ff22b1365470b8d16e9b0dac8d96c?themeId=22&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/7bf8cfee894847d795aded3616638c09?themeId=22&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/857f41cba2f148f9a38c0c2e7f392666?themeId=22&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/e400dc6bab4844a99adae29070560a30?themeId=22&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+
+            ],
+            numberAnalogy: [
+                { name: "1", url: "https://wordwall.net/tr/embed/bb8b5692d89647dfb578a17c3ce56605?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/13950cfad46d42189c7ed4f3825aa1ef?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/35fa116792d548f39a25e3b307ef26a3?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "5", url: "https://wordwall.net/tr/embed/0c56603db6c04bf09729f6524c1d1a23?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "6", url: "https://wordwall.net/tr/embed/6c70e19edfb54b6da82fb73d0aab9a33?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            ],
+            numberPuzzle: [
+                { name: "1", url: "https://wordwall.net/tr/embed/3af9b5b8a1eb4c1d8838ed30629660f7?themeId=60&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/1fd0b2492daf48c6809b99007ce6100f?themeId=60&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/07c7b1ff67ad421bae596355a6fe2417?themeId=60&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/92fff069e8524e4cb8797e64445f89a6?themeId=60&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "5", url: "https://wordwall.net/tr/embed/d281f06d08e14cf18e8d8856d34533a4?themeId=60&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            ],
+            paperFolding: [
+               { name: "1", url: "https://wordwall.net/tr/embed/7512d15e15b04e1eb71df004eb2cb6d0?themeId=44&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+	       { name: "2", url: "https://wordwall.net/tr/embed/2f34a7e09b154586bcc059ef4b5a5739?themeId=44&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+	       { name: "3", url: "https://wordwall.net/tr/embed/8969f52bf09b432ab34a4f969ac0fa4d?themeId=44&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+               { name: "4", url: "https://wordwall.net/tr/embed/4ef5765f85e74590863f3a62d813b64d?themeId=44&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            ],
+            mathematicalOperations: [
+                { name: "1", url: "https://wordwall.net/tr/embed/b6610956beec476abc3c6efbb1d9770b?themeId=45&templateId=22&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/9c99ea6161dc4bf4ba614e0ef9e7defd?themeId=50&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/d2e24ebe8fa24160beea5292cfe3fb24?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/01ff644ad34a408492daf72c868e85fb?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            ],
+            geometricShapes: [
+                { name: "1", url: "https://wordwall.net/tr/embed/5ca64dd66e4140f5aacc505844aa32c4?themeId=2&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/7bc6a0fa0954471f94125165bfb5a7a2?themeId=2&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/616d3752be5446149cb3b90f3fd83090?themeId=44&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/0f49650ef28241a0bff6f80d30bc69aa?themeId=21&templateId=30&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "5", url: "https://wordwall.net/tr/embed/d80457a73f71463884922887eeee1884?themeId=46&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            ],
+            spatialRelations: [
+               	{ name: "1", url: "https://wordwall.net/tr/embed/bca71ac44f1643aa88280202883cb98b?themeId=41&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+	       	{ name: "2", url: "https://wordwall.net/tr/embed/93c856d230d5432e8f45bb3ca394677a?themeId=50&templateId=2&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+	      	{ name: "3", url: "https://wordwall.net/tr/embed/2d496260651e4457afd8b9c1b6fefd69?themeId=50&templateId=22&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+	      	{ name: "4", url: "https://wordwall.net/tr/embed/3864b8e91c0b44aa9dc33d6bbad021e0?themeId=2&templateId=30&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+              	{ name: "5", url: "https://wordwall.net/tr/embed/0595ddd42e554e4897c13da441fbc716?themeId=3&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+              	{ name: "6", url: "https://wordwall.net/tr/embed/1b6619a11d2d48859c10b7f2d125cf62?themeId=2&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+              	{ name: "7", url: "https://wordwall.net/tr/embed/2f319e57c2df4b0bb7939d687eaad067?themeId=21&templateId=69&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+               	{ name: "8", url: "https://wordwall.net/tr/embed/16be9dd0a3e8471495acf55c47cb8f26?themeId=62&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            ],
+            physicalProperties: [
+                { name: "1", url: "https://wordwall.net/tr/embed/0f3369e99c534f729ebf9bf993360a4e?themeId=1&templateId=3&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+	 	{ name: "2", url: "https://wordwall.net/tr/embed/869d77a492224b27ab96569441bda147?themeId=46&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/7778de64535e4dbba0368d42271eaf9c?themeId=55&templateId=2&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/34ac4057691d4b1e843d07a35bae7556?themeId=52&templateId=2&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "5", url: "https://wordwall.net/tr/embed/5326061997a9459f98cd0bfcbd5a1ab7?themeId=41&templateId=2&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "6", url: "https://wordwall.net/tr/embed/873eb48348db4b739770f1a0dfc5dd76?themeId=54&templateId=2&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "7", url: "https://wordwall.net/tr/embed/02e6093623bf42a6b7e57fa3e282dfe4?themeId=55&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            ],
+            livingThings: [
+                { name: "1", url: "https://wordwall.net/tr/embed/f8f937f17cfa4f3786f7f6a51cd0cf2c?themeId=54&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/b9cdb3ef6adc4bd59cf664e5eb095574?themeId=52&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/ba4ff5fdb71043899d89138b3752415b?themeId=55&templateId=3&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/5bfe982ef2a849e186b8a4b59cde6f4d?themeId=1&templateId=3&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "5", url: "https://wordwall.net/tr/embed/f0c1a7e6dca6431e9636ecf277571994?themeId=55&templateId=3&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "6", url: "https://wordwall.net/tr/embed/913db82b54b0480a9292c504edaa0458?themeId=53&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            ],
+            visualSimilarity: [
+                { name: "1", url: "https://wordwall.net/tr/embed/bbbe2a4e96fe421e895bd8693c4fc311?themeId=52&templateId=3&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/2d08dd5ce7dc416194eabb915f0d9719?themeId=45&templateId=3&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            ],
+            findDifferentImage: [
+                { name: "1", url: "https://wordwall.net/tr/embed/70b5144c38e84d239b090dea496a5320?themeId=27&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+	        { name: "2", url: "https://wordwall.net/tr/embed/5a623041665f4bda800e4b6e07a2a187?themeId=52&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/d3e44b40a11d461e820b63ba5c3054ac?themeId=55&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/45c8334863b04636a9f67eebf344bc6c?themeId=57&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "5", url: "https://wordwall.net/tr/embed/c619e561e84b4eb7a2267cd8973148d7?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+
+            ]
+        };
+
+        const clickSound = document.getElementById('clickSound');
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const folders = document.querySelectorAll('.folder');
+            folders.forEach(folder => {
+                const section = folder.getAttribute('data-section');
+                folder.querySelector('.activity-count').textContent = `${exams[section].length} etkinlik`;
+                folder.addEventListener('click', () => {
+                    playClickSound();  // Ses çalma
+                    showExams(section, folder.querySelector('.title').textContent);
+                });
+            });
+        });
+
+        function playClickSound() {
+            clickSound.currentTime = 0; // Sesin başlangıcına git
+            clickSound.play(); // Sesi oynat
+        }
+
+        function showExams(section, sectionName) {
+            document.getElementById('examList').innerHTML = exams[section]
+                .map(exam => `<li><button onclick="loadExam('${exam.url}')"><img src="${exam.image}" alt="exam-icon">${exam.name}</button></li>`)
+                .join('');
+            document.getElementById('pageTitle').innerHTML = '1. Sınıf <br>' + sectionName; // <br> ile alt satıra geç
+            document.getElementById('sectionList').classList.add('hidden');
+            document.getElementById('examSection').classList.remove('hidden');
+        }
+
+        function loadExam(url) {
+            playClickSound(); // Ses çalma
+            document.getElementById('examFrame').src = url;
+            document.getElementById('examSection').classList.add('hidden');
+            document.getElementById('iframeContainer').classList.remove('hidden');
+        }
+
+        function goBack() {
+            playClickSound(); // Ses çalma
+            if (!document.getElementById('examSection').classList.contains('hidden')) {
+                document.getElementById('examSection').classList.add('hidden');
+                document.getElementById('sectionList').classList.remove('hidden');
+                document.getElementById('pageTitle').textContent = '1. Sınıf';
+            } else {
+                document.getElementById('iframeContainer').classList.add('hidden');
+                document.getElementById('examSection').classList.remove('hidden');
+            }
+        }
+    </script>
+ <audio autoplay loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Tarayıcınız audio etiketini desteklemiyor.
+    </audio>
+</body>
+</html>
