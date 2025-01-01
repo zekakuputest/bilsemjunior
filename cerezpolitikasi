@@ -1,81 +1,147 @@
-Bilsem Junior olarak, kullanıcı deneyimini geliştirmek, uygulama performansını optimize etmek ve hizmetlerimizi daha etkili bir şekilde sunmak amacıyla çerezler ve benzeri teknolojiler kullanmaktayız. Bu Çerez Politikası, çerezlerin ne olduğunu, neden kullanıldığını, hangi tür çerezlerin toplandığını ve kullanıcıların çerez tercihlerini nasıl yönetebileceğini detaylı olarak açıklamaktadır.
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilsem Junior - Çerez Politikası</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
 
-1. Çerez Nedir?
-Çerezler, bir web sitesi veya uygulama tarafından cihazınıza (bilgisayar, tablet, akıllı telefon vb.) gönderilen ve cihazınıza kaydedilen küçük veri dosyalarıdır. Bu dosyalar, ziyaret ettiğiniz sayfalar, tercih ettiğiniz ayarlar ve kullanım alışkanlıklarınız gibi bilgileri saklayarak tarama deneyiminizi kolaylaştırır. Çerezler genellikle şu bilgileri içerebilir:
+        header {
+            background-color: #f78c42;
+            text-align: center;
+            padding: 20px 0;
+            color: white;
+            font-size: 36px;
+            font-weight: bold;
+            border-bottom: 5px solid #e66f29;
+        }
 
-Kullanıcı kimliği
-Oturum bilgileri
-Kullanıcı tercihleri
-Gezinme geçmişi
-Benzeri teknolojiler arasında piksel etiketleri, yerel depolama (local storage) ve yazılım geliştirme kitleri (SDK'ler) yer alır.
+        main {
+            padding: 30px;
+            text-align: left;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-2. Kullandığımız Çerez Türleri
-Uygulamada kullanılan çerezler farklı amaçlara hizmet eder ve işlevlerine göre kategorilere ayrılır:
+        h2, h3 {
+            color: #f78c42;
+        }
 
-Zorunlu Çerezler:
+        h2 {
+            font-size: 30px;
+        }
 
-Uygulamanın temel işlevlerini yerine getirmesi için gereklidir.
-Oturum açma, kullanıcı kimlik doğrulama ve güvenli alanlara erişim gibi özelliklerin sağlanmasını mümkün kılar.
-Bu çerezler kullanıcı onayı olmadan kullanılabilir çünkü uygulamanın çalışması için zorunludur.
-Performans ve Analiz Çerezleri:
+        h3 {
+            font-size: 24px;
+            margin-top: 20px;
+        }
 
-Uygulamanın nasıl kullanıldığını analiz eder ve performans sorunlarını tespit eder.
-Kullanıcı davranışlarını anlamak için istatistiksel bilgiler toplar (örneğin, en sık kullanılan bölümler).
-Bu veriler anonimdir ve kişisel bilgi içermez.
-İşlevsellik Çerezleri:
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #555;
+        }
 
-Kullanıcıların tercihlerine uygun bir deneyim sunmak için kullanılır.
-Dil, bölge, temalar gibi kullanıcı ayarlarını hatırlar.
-Daha özelleştirilmiş bir deneyim sağlar.
-Hedefleme ve Reklam Çerezleri:
+        ul {
+            font-size: 18px;
+            color: #555;
+            padding-left: 20px;
+        }
 
-Kullanıcıların ilgi alanlarına yönelik içerik ve reklam sunar.
-Reklam kampanyalarının etkinliğini ölçer.
-Bu çerezler, üçüncü taraf reklam sağlayıcılar tarafından da yerleştirilebilir.
-3. Çerezlerin Kullanım Amaçları
-Topladığımız çerezler, aşağıdaki temel amaçlarla kullanılmaktadır:
+        footer {
+            background-color: #f78c42;
+            text-align: center;
+            padding: 15px;
+            color: white;
+            font-size: 18px;
+            margin-top: 50px;
+        }
 
-Kullanıcı Deneyimini İyileştirme:
+    </style>
+</head>
+<body>
 
-Uygulamanın performansını artırmak ve kullanıcıların ihtiyaçlarına uygun şekilde çalışmasını sağlamak.
-Analiz ve Ölçüm:
+    <header>
+        Bilsem Junior - Çerez Politikası
+    </header>
 
-Kullanıcıların uygulamayı nasıl kullandıklarını anlamak, iyileştirme alanlarını belirlemek ve uygulama hatalarını tespit etmek.
-Özelleştirme:
+    <main>
+        <h2>1. Çerez Nedir?</h2>
+        <p>Çerezler, bir web sitesi veya uygulama tarafından cihazınıza (bilgisayar, tablet, akıllı telefon vb.) gönderilen ve cihazınıza kaydedilen küçük veri dosyalarıdır. Bu dosyalar, ziyaret ettiğiniz sayfalar, tercih ettiğiniz ayarlar ve kullanım alışkanlıklarınız gibi bilgileri saklayarak tarama deneyiminizi kolaylaştırır. Çerezler genellikle şu bilgileri içerebilir:</p>
+        <ul>
+            <li>Kullanıcı kimliği</li>
+            <li>Oturum bilgileri</li>
+            <li>Kullanıcı tercihleri</li>
+            <li>Gezinme geçmişi</li>
+        </ul>
+        <p>Benzeri teknolojiler arasında piksel etiketleri, yerel depolama (local storage) ve yazılım geliştirme kitleri (SDK'ler) yer alır.</p>
 
-Kullanıcı tercihlerini (örneğin, dil ve görüntüleme ayarları) hatırlayarak uygulamayı kişiselleştirmek.
-Reklamcılık ve Pazarlama:
+        <h2>2. Kullandığımız Çerez Türleri</h2>
+        <p>Uygulamada kullanılan çerezler farklı amaçlara hizmet eder ve işlevlerine göre kategorilere ayrılır:</p>
 
-Kullanıcı ilgi alanlarına yönelik hedefli reklamlar sunmak (izniniz dahilinde).
-Reklam kampanyalarının başarısını değerlendirmek.
-4. Üçüncü Taraf Çerezleri
-Bazı durumlarda, uygulama içinde üçüncü taraflar tarafından sağlanan hizmetler nedeniyle çerezler kullanılabilir. Örneğin:
+        <h3>Zorunlu Çerezler:</h3>
+        <p>Uygulamanın temel işlevlerini yerine getirmesi için gereklidir. Oturum açma, kullanıcı kimlik doğrulama ve güvenli alanlara erişim gibi özelliklerin sağlanmasını mümkün kılar. Bu çerezler kullanıcı onayı olmadan kullanılabilir çünkü uygulamanın çalışması için zorunludur.</p>
 
-Analiz Hizmetleri: Uygulama kullanımını analiz etmek için Google Analytics veya benzeri araçlar.
-Reklam Sağlayıcılar: Kullanıcılara hedefli reklamlar sunmak için Google Ads veya benzeri platformlar.
-Üçüncü taraf çerezleri, ilgili sağlayıcıların gizlilik ve çerez politikalarına tabidir. Bu çerezlerin nasıl kullanıldığını öğrenmek için ilgili hizmet sağlayıcının politikalarını incelemeniz önerilir.
+        <h3>Performans ve Analiz Çerezleri:</h3>
+        <p>Uygulamanın nasıl kullanıldığını analiz eder ve performans sorunlarını tespit eder. Kullanıcı davranışlarını anlamak için istatistiksel bilgiler toplar (örneğin, en sık kullanılan bölümler). Bu veriler anonimdir ve kişisel bilgi içermez.</p>
 
-5. Çerez Yönetimi
-Çerezler üzerinde tam kontrol sağlamak için çeşitli seçenekleriniz bulunmaktadır:
+        <h3>İşlevsellik Çerezleri:</h3>
+        <p>Kullanıcıların tercihlerine uygun bir deneyim sunmak için kullanılır. Dil, bölge, temalar gibi kullanıcı ayarlarını hatırlar. Daha özelleştirilmiş bir deneyim sağlar.</p>
 
-Tarayıcı Ayarları:
+        <h3>Hedefleme ve Reklam Çerezleri:</h3>
+        <p>Kullanıcıların ilgi alanlarına yönelik içerik ve reklam sunar. Reklam kampanyalarının etkinliğini ölçer. Bu çerezler, üçüncü taraf reklam sağlayıcılar tarafından da yerleştirilebilir.</p>
 
-Çerezleri kabul etme, reddetme veya kaldırma işlemleri tarayıcı ayarları üzerinden yapılabilir. Çoğu tarayıcı, çerez ayarlarını özelleştirme imkanı sunar.
-Örneğin:
-Google Chrome: Ayarlar > Gizlilik ve Güvenlik > Çerezler ve diğer site verileri
-Safari: Tercihler > Gizlilik > Çerezleri Engelle
-Çerezleri Devre Dışı Bırakma:
+        <h2>3. Çerezlerin Kullanım Amaçları</h2>
+        <p>Topladığımız çerezler, aşağıdaki temel amaçlarla kullanılmaktadır:</p>
+        <ul>
+            <li><strong>Kullanıcı Deneyimini İyileştirme:</strong> Uygulamanın performansını artırmak ve kullanıcıların ihtiyaçlarına uygun şekilde çalışmasını sağlamak.</li>
+            <li><strong>Analiz ve Ölçüm:</strong> Kullanıcıların uygulamayı nasıl kullandıklarını anlamak, iyileştirme alanlarını belirlemek ve uygulama hatalarını tespit etmek.</li>
+            <li><strong>Özelleştirme:</strong> Kullanıcı tercihlerini (örneğin, dil ve görüntüleme ayarları) hatırlayarak uygulamayı kişiselleştirmek.</li>
+            <li><strong>Reklamcılık ve Pazarlama:</strong> Kullanıcı ilgi alanlarına yönelik hedefli reklamlar sunmak (izniniz dahilinde). Reklam kampanyalarının başarısını değerlendirmek.</li>
+        </ul>
 
-Çerezleri tamamen devre dışı bırakabilirsiniz. Ancak, bazı durumlarda uygulamanın belirli işlevleri tam olarak çalışmayabilir.
-Çerez Tercihi Araçları:
+        <h2>4. Üçüncü Taraf Çerezleri</h2>
+        <p>Bazı durumlarda, uygulama içinde üçüncü taraflar tarafından sağlanan hizmetler nedeniyle çerezler kullanılabilir. Örneğin:</p>
+        <ul>
+            <li><strong>Analiz Hizmetleri:</strong> Uygulama kullanımını analiz etmek için Google Analytics veya benzeri araçlar.</li>
+            <li><strong>Reklam Sağlayıcılar:</strong> Kullanıcılara hedefli reklamlar sunmak için Google Ads veya benzeri platformlar.</li>
+        </ul>
+        <p>Üçüncü taraf çerezleri, ilgili sağlayıcıların gizlilik ve çerez politikalarına tabidir. Bu çerezlerin nasıl kullanıldığını öğrenmek için ilgili hizmet sağlayıcının politikalarını incelemeniz önerilir.</p>
 
-Reklam çerezlerini yönetmek için Your Online Choices gibi araçları kullanabilirsiniz.
-Not: Çerezlerin devre dışı bırakılması, kullanıcı deneyimini olumsuz etkileyebilir ve bazı özelliklerin çalışmasını engelleyebilir.
+        <h2>5. Çerez Yönetimi</h2>
+        <p>Çerezler üzerinde tam kontrol sağlamak için çeşitli seçenekleriniz bulunmaktadır:</p>
+        <ul>
+            <li><strong>Tarayıcı Ayarları:</strong> Çerezleri kabul etme, reddetme veya kaldırma işlemleri tarayıcı ayarları üzerinden yapılabilir. Çoğu tarayıcı, çerez ayarlarını özelleştirme imkanı sunar. Örneğin:</li>
+            <ul>
+                <li>Google Chrome: Ayarlar > Gizlilik ve Güvenlik > Çerezler ve diğer site verileri</li>
+                <li>Safari: Tercihler > Gizlilik > Çerezleri Engelle</li>
+            </ul>
+            <li><strong>Çerezleri Devre Dışı Bırakma:</strong> Çerezleri tamamen devre dışı bırakabilirsiniz. Ancak, bazı durumlarda uygulamanın belirli işlevleri tam olarak çalışmayabilir.</li>
+            <li><strong>Çerez Tercihi Araçları:</strong> Reklam çerezlerini yönetmek için Your Online Choices gibi araçları kullanabilirsiniz.</li>
+        </ul>
+        <p>Not: Çerezlerin devre dışı bırakılması, kullanıcı deneyimini olumsuz etkileyebilir ve bazı özelliklerin çalışmasını engelleyebilir.</p>
 
-6. Verilerin Saklanma Süresi
-Çerezlerin cihazınızda ne kadar süre saklanacağı türüne bağlıdır:
+        <h2>6. Verilerin Saklanma Süresi</h2>
+        <p>Çerezlerin cihazınızda ne kadar süre saklanacağı türüne bağlıdır:</p>
+        <ul>
+            <li><strong>Oturum Çerezleri:</strong> Tarayıcınızı kapattığınızda silinir.</li>
+            <li><strong>Kalıcı Çerezler:</strong> Belirli bir süre boyunca cihazınızda saklanır ve bu süre, çerezin amacına bağlı olarak değişir.</li>
+        </ul>
 
-Oturum Çerezleri: Tarayıcınızı kapattığınızda silinir.
-Kalıcı Çerezler: Belirli bir süre boyunca cihazınızda saklanır ve bu süre, çerezin amacına bağlı olarak değişir.
-7. Çerez Politikası Değişiklikleri
-Bu Çerez Politikası zaman zaman güncellenebilir. Güncellemeler uygulama içinde duyurulacak ve geçerlilik tarihi belirtilecektir. Çerez politikasında yapılan değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, güncellenen politikayı kabul ettiğiniz anlamına gelir.
+        <h2>7. Çerez Politikası Değişiklikleri</h2>
+        <p>Bu Çerez Politikası zaman zaman güncellenebilir. Güncellemeler uygulama içinde duyurulacak ve geçerlilik tarihi belirtilecektir. Çerez politikasında yapılan değişikliklerden sonra uygulamayı kullanmaya devam etmeniz, güncellenen politikayı kabul ettiğiniz anlamına gelir.</p>
+    </main>
+
+    <footer>
+        &copy; 2025 Bilsem Junior | Tüm Hakları Saklıdır
+    </footer>
+
+</body>
+</html>
