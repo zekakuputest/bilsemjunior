@@ -18,26 +18,26 @@
         }
 
         h1 {
-            color: #4CAF50;
-            padding: 30px 0;
-            font-size: 28px;
-            animation: swing 2s infinite ease-in-out;
-            font-family: "Times New Roman", Times, serif;
+            display: none; /* Başlığı gizle */
         }
 
-        @keyframes swing {
-            0%, 100% { transform: rotate(0deg); }
-            50% { transform: rotate(3deg); }
+        .icon-container {
+            margin-top: 30px; /* İkon ile başlık arasına boşluk bırak */
+        }
+
+        .icon-container img {
+            width: 100px; /* İkonun boyutunu ayarla */
+            height: 100px; /* İkonun boyutunu ayarla */
         }
 
         .folder-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 eşit sütun */
-    gap: 20px;
-    padding: 20px;
-    margin: auto;
-    max-width: 900px; /* Gerekirse genişliği ayarla */
-}
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            margin: auto;
+            max-width: 900px;
+        }
 
         .folder {
             height: 120px;
@@ -53,8 +53,8 @@
         }
 
         .folder img {
-            width: 80px; /* Adjusted for tablet view */
-            height: 80px; /* Adjusted for tablet view */
+            width: 80px;
+            height: 80px;
         }
 
         .folder:hover {
@@ -66,18 +66,6 @@
             font-weight: bold;
             margin-top: 5px;
             font-size: 14px;
-        }
-
-        .activity-count {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: #FF9800;
-            color: #fff;
-            padding: 5px 10px;
-            border-radius: 10px;
-            font-size: 12px;
         }
 
         @keyframes folderMove {
@@ -133,8 +121,8 @@
         }
 
         .exam-list img {
-            width: 40px; /* Adjusted for tablet view */
-            height: 40px; /* Adjusted for tablet view */
+            width: 40px;
+            height: 40px;
             margin-right: 10px;
         }
 
@@ -156,7 +144,9 @@
     </style>
 </head>
 <body>
-    <h1 id="pageTitle">1. Sınıf</h1>
+    <!-- Başlık kısmını kaldırdık -->
+    <div class="icon-container">
+        <img src="https://img.icons8.com/fluency/100/artificial-intelligence.png" alt="Artificial Intelligence Icon">
 
     <div class="folder-container" id="sectionList">
         <div class="folder" data-section="shapeClassification">
