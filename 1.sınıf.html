@@ -18,10 +18,9 @@
         }
 
         h1 {
-            display: none; /* Başlığı gizle */
+          display: none;
         }
-
-        .icon-container {
+.icon-container {
             margin-top: 30px; /* İkon ile başlık arasına boşluk bırak */
         }
 
@@ -38,6 +37,19 @@
             margin: auto;
             max-width: 900px;
         }
+        @keyframes swing {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(3deg); }
+        }
+
+        .folder-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 eşit sütun */
+    gap: 20px;
+    padding: 20px;
+    margin: auto;
+    max-width: 900px; /* Gerekirse genişliği ayarla */
+}
 
         .folder {
             height: 120px;
@@ -53,8 +65,8 @@
         }
 
         .folder img {
-            width: 80px;
-            height: 80px;
+            width: 80px; /* Adjusted for tablet view */
+            height: 80px; /* Adjusted for tablet view */
         }
 
         .folder:hover {
@@ -66,6 +78,18 @@
             font-weight: bold;
             margin-top: 5px;
             font-size: 14px;
+        }
+
+        .activity-count {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #FF9800;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 12px;
         }
 
         @keyframes folderMove {
@@ -121,8 +145,8 @@
         }
 
         .exam-list img {
-            width: 40px;
-            height: 40px;
+            width: 40px; /* Adjusted for tablet view */
+            height: 40px; /* Adjusted for tablet view */
             margin-right: 10px;
         }
 
@@ -144,10 +168,9 @@
     </style>
 </head>
 <body>
-    <!-- Başlık kısmını kaldırdık -->
-    <div class="icon-container">
+    <h1 id="pageTitle">1. Sınıf</h1>
+<div class="icon-container">
         <img src="https://img.icons8.com/fluency/100/artificial-intelligence.png" alt="Artificial Intelligence Icon">
-
     <div class="folder-container" id="sectionList">
         <div class="folder" data-section="shapeClassification">
             <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
