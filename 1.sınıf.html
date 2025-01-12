@@ -31,13 +31,13 @@
         }
 
         .folder-container {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 eşit sütun */
-    gap: 20px;
-    padding: 20px;
-    margin: auto;
-    max-width: 900px; /* Gerekirse genişliği ayarla */
-}
+            display: grid; /* Use grid for layout */
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+            gap: 20px; /* Space between items */
+            padding: 20px;
+            margin: auto;
+            max-width: 800px; /* Set a maximum width for better layout */
+        }
 
         .folder {
             height: 120px;
@@ -157,80 +157,83 @@
 </head>
 <body>
     <h1 id="pageTitle">1. Sınıf</h1>
-
+<div class="icon-container">
+   <img src="https://img.icons8.com/fluency/100/artificial-intelligence.png" alt="Artificial Intelligence Icon" />
+</div>
+ 
     <div class="folder-container" id="sectionList">
         <div class="folder" data-section="shapeClassification">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://img.icons8.com/fluency/100/battery.png" alt="folder-icon"/>
             <div class="title">1-Şekil Sınıflandırma</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="shapeAnalysis">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://img.icons8.com/fluency/100/battery.png" alt="folder-icon"/>
             <div class="title">2-Şekil Analizi</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="numberSeries">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://img.icons8.com/fluency/100/battery.png" alt="folder-icon"/>
             <div class="title">3-Sayı Serisi</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="imageClassification">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://img.icons8.com/fluency/100/battery.png" alt="folder-icon"/>
             <div class="title">4-Resim Sınıflandırma</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="imageAnalogy">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://img.icons8.com/fluency/100/battery.png" alt="folder-icon"/>
             <div class="title">5-Resim Analojisi</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="numberAnalogy">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://img.icons8.com/fluency/100/battery.png" alt="folder-icon"/>
             <div class="title">6-Sayı Analojisi</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="numberPuzzle">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://img.icons8.com/fluency/100/battery.png" alt="folder-icon"/>
             <div class="title">7-Sayı Bulmacası</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="paperFolding">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://img.icons8.com/fluency/100/battery.png" alt="folder-icon"/>
             <div class="title">8-Kağıt Katlama</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="mathematicalOperations">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://img.icons8.com/fluency/100/battery.png" alt="folder-icon"/>
             <div class="title">9-Matamatiksel İşlemler</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="geometricShapes">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://img.icons8.com/fluency/100/battery.png" alt="folder-icon"/>
             <div class="title">10-Geometrik Şekiller</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="spatialRelations">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://img.icons8.com/fluency/100/battery.png" alt="folder-icon"/>
             <div class="title">11-Uzamsal İlişkiler</div>
             <div class="activity-count">0 etkinlik</div>
          </div>
          <div class="folder" data-section="physicalProperties">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://img.icons8.com/fluency/100/battery.png" alt="folder-icon"/>
             <div class="title">12-Fiziksel Özellikler</div>
             <div class="activity-count">0 etkinlik</div>
           </div>
           <div class="folder" data-section="livingThings">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://img.icons8.com/fluency/100/battery.png" alt="folder-icon"/>
             <div class="title">13-Canlılar</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="visualSimilarity">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://img.icons8.com/fluency/100/battery.png" alt="folder-icon"/>
             <div class="title">14-Görselde Benzerlik</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="findDifferentImage">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://img.icons8.com/fluency/100/battery.png" alt="folder-icon"/>
             <div class="title">15-Farklı Resmi Bul</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
@@ -404,6 +407,9 @@
             }
         }
     </script>
-
+ <audio autoplay loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Tarayıcınız audio etiketini desteklemiyor.
+    </audio>
 </body>
 </html>
