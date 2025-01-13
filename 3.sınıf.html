@@ -262,12 +262,12 @@
     </div>
 
     <div id="examSection" class="hidden">
-        <img class="back-button" src="https://img.icons8.com/fluency/48/back.png" alt="Geri Dön" onclick="goBack()">
+        <img class="back-button" src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/back.png" alt="Geri Dön" onclick="goBack()">
         <ul class="exam-list" id="examList"></ul>
     </div>
 
     <div class="iframe-container hidden" id="iframeContainer">
-        <img class="back-button" src="https://img.icons8.com/fluency/48/back.png" alt="Geri Dön" onclick="goBack()">
+        <img class="back-button" src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/back.png" alt="Geri Dön" onclick="goBack()">
         <iframe id="examFrame" src="" frameborder="0" allowfullscreen></iframe>
     </div>
 
@@ -276,45 +276,45 @@
     <script>
         const exams = {
                          shapeClassification: [
-		{ name: "1", url: "https://wordwall.net/tr/embed/a1ee6a437b5649cd8fcd573c2b3afdcd?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "2", url: "https://wordwall.net/tr/embed/dd920ee313f24fb1a79db032dadca255?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "3", url: "https://wordwall.net/tr/embed/21bf2cf84c9644e7a1d8e1552e18dfeb?themeId=50&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "4", url: "https://wordwall.net/tr/embed/533178979d8a4f67839e0516df53c798?themeId=3&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-        { name: "5", url: "https://wordwall.net/tr/embed/2d27ff18e1d04a14bd6489c5aa916c19?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+		{ name: "1", url: "https://wordwall.net/tr/embed/a1ee6a437b5649cd8fcd573c2b3afdcd?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/dd920ee313f24fb1a79db032dadca255?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/21bf2cf84c9644e7a1d8e1552e18dfeb?themeId=50&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/533178979d8a4f67839e0516df53c798?themeId=3&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+        { name: "5", url: "https://wordwall.net/tr/embed/2d27ff18e1d04a14bd6489c5aa916c19?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" }
             ],
             shapeAnalysis: [
-                { name: "1", url: "https://wordwall.net/tr/embed/7688261c12654df8a09dc335c5ca5cac?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-	        { name: "2", url: "https://wordwall.net/tr/embed/a96ae8430bb5449eabfe95e5a3fe4339?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "3", url: "https://wordwall.net/tr/embed/9eb26dce1f1e476bb1138441408b73af?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "4", url: "https://wordwall.net/tr/embed/cfd5ccc809f9446d8c6dabbc2cb5b320?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+                { name: "1", url: "https://wordwall.net/tr/embed/7688261c12654df8a09dc335c5ca5cac?themeId=45&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+	        { name: "2", url: "https://wordwall.net/tr/embed/a96ae8430bb5449eabfe95e5a3fe4339?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/9eb26dce1f1e476bb1138441408b73af?themeId=45&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/cfd5ccc809f9446d8c6dabbc2cb5b320?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" }
             ],
             numberSeries: [
-                { name: "1", url: "https://wordwall.net/tr/embed/1726931a5d5f4c2e869419b7c09137d9?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+                { name: "1", url: "https://wordwall.net/tr/embed/1726931a5d5f4c2e869419b7c09137d9?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" }
             ],
             imageClassification: [
-                { name: "1", url: "https://wordwall.net/tr/embed/ced697b1dd6d4c569bbe0a612b9adcc5?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "2", url: "https://wordwall.net/tr/embed/bd862a280deb4dc5b39d3bf9b3f76d2f?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "3", url: "https://wordwall.net/tr/embed/25a236249b5a4d48997e1c419a41d31f?themeId=1&templateId=5&fontStackId=0" , image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "4", url: "https://wordwall.net/tr/embed/4d3db0295df3470fbc9713c0b25cf969?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+                { name: "1", url: "https://wordwall.net/tr/embed/ced697b1dd6d4c569bbe0a612b9adcc5?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/bd862a280deb4dc5b39d3bf9b3f76d2f?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/25a236249b5a4d48997e1c419a41d31f?themeId=1&templateId=5&fontStackId=0" , image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/4d3db0295df3470fbc9713c0b25cf969?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" }
             ],
             imageAnalogy: [
-                { name: "1", url: "https://wordwall.net/tr/embed/acfa95839c3e490a8fdd71c303b1f011?themeId=60&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "2", url: "https://wordwall.net/tr/embed/6f59899c9b3f4122b4fb401e81560de1?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "3", url: "https://wordwall.net/tr/embed/67c5a49106c94ecea3f5a74e2bd21a28?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "4", url: "https://wordwall.net/tr/embed/ccd0a150218a48d5922c211a91a37952?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+                { name: "1", url: "https://wordwall.net/tr/embed/acfa95839c3e490a8fdd71c303b1f011?themeId=60&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/6f59899c9b3f4122b4fb401e81560de1?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/67c5a49106c94ecea3f5a74e2bd21a28?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/ccd0a150218a48d5922c211a91a37952?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" }
 
             ],
             numberAnalogy: [
-                { name: "1", url: "https://wordwall.net/tr/embed/2d705ed7b3604832b6e1a204f3f47dea?themeId=55&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "2", url: "https://wordwall.net/tr/embed/2448061412c346da9b88c889fcb323b5?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "3", url: "https://wordwall.net/tr/embed/ae7c86b3a279423dba492b0ce5bb3488?themeId=55&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "4", url: "https://wordwall.net/tr/embed/5d095030b92543f2a66de3f3c3e99ffe?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "5", url: "https://wordwall.net/tr/embed/d15af17b8bd942529fddd97e6314c890?themeId=23&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+                { name: "1", url: "https://wordwall.net/tr/embed/2d705ed7b3604832b6e1a204f3f47dea?themeId=55&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/2448061412c346da9b88c889fcb323b5?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/ae7c86b3a279423dba492b0ce5bb3488?themeId=55&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/5d095030b92543f2a66de3f3c3e99ffe?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+		{ name: "5", url: "https://wordwall.net/tr/embed/d15af17b8bd942529fddd97e6314c890?themeId=23&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" }
             ],
             numberPuzzle: [
-                { name: "1", url: "https://wordwall.net/tr/embed/1068096b97564e0896f82cd958cb078a?themeId=27&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "2", url: "https://wordwall.net/tr/embed/f0d9fa441090488aa40aeaa6e08df820?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "3", url: "https://wordwall.net/tr/embed/0d0a11e7bd0b4acda04433ecc2b3eea3?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+                { name: "1", url: "https://wordwall.net/tr/embed/1068096b97564e0896f82cd958cb078a?themeId=27&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/f0d9fa441090488aa40aeaa6e08df820?themeId=45&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/0d0a11e7bd0b4acda04433ecc2b3eea3?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" }
             ],
             paperFolding: [
             
