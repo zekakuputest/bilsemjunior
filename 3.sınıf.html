@@ -5,10 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bilsem Sınavları</title>
     <style>
-        body {
+       body {
             font-family: Arial, sans-serif;
             text-align: center;
             background-color: #ffffff;
+   background-image: url('https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/arka3.png'); /* Arka plana görsel ekleme */
+    background-size: cover; /* Görselin ekranı tamamen kaplamasını sağlar */
+    background-position: center; /* Görselin ortalanmasını sağlar */
+    background-repeat: no-repeat; /* Görselin tekrar etmesini engeller */
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -17,12 +21,23 @@
             justify-content: center;
         }
 
-        h1 {
-            color: #4CAF50;
-            padding: 30px 0;
-            font-size: 28px;
-            animation: swing 2s infinite ease-in-out;
-            font-family: "Times New Roman", Times, serif;
+      
+.icon-container {
+            margin-top: 30px; /* İkon ile başlık arasına boşluk bırak */
+        }
+
+        .icon-container img {
+            width: 100px; /* İkonun boyutunu ayarla */
+            height: 100px; /* İkonun boyutunu ayarla */
+        }
+
+        .folder-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            margin: auto;
+            max-width: 900px;
         }
 
         @keyframes swing {
@@ -33,10 +48,10 @@
         .folder-container {
             display: grid; /* Use grid for layout */
             grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
-            gap: 20px; /* Space between items */
-            padding: 20px;
+            gap: 30px; /* Space between items */
+            padding: 30px;
             margin: auto;
-            max-width: 800px; /* Set a maximum width for better layout */
+            max-width: 900px; /* Set a maximum width for better layout */
         }
 
         .folder-container {
@@ -62,8 +77,8 @@
 }
 
 .folder img {
-    width: 80px; /* Görsel genişliği */
-    height: 80px; /* Görsel yüksekliği */
+    width: 40px; /* Görsel genişliği */
+    height: 40px; /* Görsel yüksekliği */
 }
 
 .folder:hover {
@@ -80,7 +95,7 @@
 
         .activity-count {
             position: absolute;
-            top: 50%;
+            top: 100%;
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: #FF9800;
@@ -135,7 +150,7 @@
             display: flex;
             align-items: center;
             transition: transform 0.2s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         }
 
         .exam-list button:hover {
@@ -170,77 +185,77 @@
 
     <div class="folder-container" id="sectionList">
         <div class="folder" data-section="shapeClassification">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/beaver_2298445.png" alt="folder-icon"/>
             <div class="title">1-Şekil Sınıflandırma</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="shapeAnalysis">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/beaver_375096.png"/>
             <div class="title">2-Şekil Matrisleri</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="numberSeries">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/bee_1864711.png"/>
             <div class="title">3-Sözlü Analoji</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="imageClassification">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/british-shorthair-cat_1145728.png"/>
             <div class="title">4-Sayı Serisi</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="imageAnalogy">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/cat_375061.png" alt="folder-icon"/>
             <div class="title">5-Sayı Bulmacası</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="numberAnalogy">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" alt="folder-icon"/>
             <div class="title">6-Sayı Analojisi</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="numberPuzzle">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_616475.png" alt="folder-icon"/>
             <div class="title">7-Sayı Bulmacası</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="paperFolding">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/lion_6034064.png" alt="folder-icon"/>
             <div class="title">8-Kağıt Katlama</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="mathematicalOperations">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/panda_721254.png" alt="folder-icon"/>
             <div class="title">9-Matamatiksel İşlemler</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="geometricShapes">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/penguin_2300566.png"/>
             <div class="title">10-Geometrik Şekiller</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="spatialRelations">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/phone-call_434684.png"/>
             <div class="title">11-Uzamsal İlişkiler</div>
             <div class="activity-count">0 etkinlik</div>
          </div>
          <div class="folder" data-section="physicalProperties">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/persian_6855365.png" alt="folder-icon"/>
             <div class="title">12-Fiziksel Özellikler</div>
             <div class="activity-count">0 etkinlik</div>
           </div>
           <div class="folder" data-section="livingThings">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/owl_8490300.png" alt="folder-icon"/>
             <div class="title">13-Canlılar</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="visualSimilarity">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/racoon_375093.png" alt="folder-icon"/>
             <div class="title">14-Görselde Benzerlik</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="findDifferentImage">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" alt="folder-icon"/>
             <div class="title">15-Farklı Resmi Bul</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
