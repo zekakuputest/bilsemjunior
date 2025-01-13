@@ -6,9 +6,13 @@
     <title>Bilsem Sınavları</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+         font-family: Arial, sans-serif;
             text-align: center;
             background-color: #ffffff;
+   background-image: url('https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/arka3.png'); /* Arka plana görsel ekleme */
+    background-size: cover; /* Görselin ekranı tamamen kaplamasını sağlar */
+    background-position: center; /* Görselin ortalanmasını sağlar */
+    background-repeat: no-repeat; /* Görselin tekrar etmesini engeller */
             margin: 0;
             padding: 0;
             height: 100vh;
@@ -16,13 +20,22 @@
             flex-direction: column;
             justify-content: center;
         }
+.icon-container {
+            margin-top: 30px; /* İkon ile başlık arasına boşluk bırak */
+        }
 
-        h1 {
-            color: #4CAF50;
-            padding: 30px 0;
-            font-size: 28px;
-            animation: swing 2s infinite ease-in-out;
-            font-family: "Times New Roman", Times, serif;
+        .icon-container img {
+            width: 100px; /* İkonun boyutunu ayarla */
+            height: 100px; /* İkonun boyutunu ayarla */
+        }
+
+        .folder-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            margin: auto;
+            max-width: 900px;
         }
 
         @keyframes swing {
@@ -33,8 +46,8 @@
         .folder-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 eşit sütun */
-    gap: 20px;
-    padding: 20px;
+    gap: 30px;
+    padding: 30px;
     margin: auto;
     max-width: 900px; /* Gerekirse genişliği ayarla */
         }
@@ -53,8 +66,8 @@
         }
 
         .folder img {
-            width: 80px; /* Adjusted for tablet view */
-            height: 80px; /* Adjusted for tablet view */
+            width: 40px; /* Adjusted for tablet view */
+            height: 40px; /* Adjusted for tablet view */
         }
 
         .folder:hover {
@@ -70,7 +83,7 @@
 
         .activity-count {
             position: absolute;
-            top: 50%;
+            top: 100%;
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: #FF9800;
@@ -125,7 +138,7 @@
             display: flex;
             align-items: center;
             transition: transform 0.2s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
         }
 
         .exam-list button:hover {
@@ -160,89 +173,89 @@
 
     <div class="folder-container" id="sectionList">
         <div class="folder" data-section="shapeClassification">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/beaver_2298445.png" alt="folder-icon"/>
             <div class="title">1-Şekil Sınıflandırma</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="shapeAnalysis">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/beaver_375096.png" alt="folder-icon"/>
             <div class="title">2-Şekil Analizi</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="numberSeries">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/bee_1864711.png" alt="folder-icon"/>
             <div class="title">3-Sayı Analojisi</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="imageClassification">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/british-shorthair-cat_1145728.png" alt="folder-icon"/>
             <div class="title">4-Kağıt Katlama</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="imageAnalogy">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/cat_375061.png" alt="folder-icon"/>
             <div class="title">5-Analoji</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="numberAnalogy">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" alt="folder-icon"/>
             <div class="title">6-Analoji</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="numberPuzzle">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_616475.png" alt="folder-icon"/>
             <div class="title">7-Uzlamsal</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="paperFolding">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/lion_6034064.png" alt="folder-icon"/>
             <div class="title">8-Şifreleme</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="mathematicalOperations">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/panda_721254.png" alt="folder-icon"/>
             <div class="title">9-Matamatiksel İşlemler</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="geometricShapes">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/penguin_2300566.png" alt="folder-icon"/>
             <div class="title">10-Geometrik Şekiller</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="spatialRelations">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/phone-call_434684.png" alt="folder-icon"/>
             <div class="title">11-Uzamsal İlişkiler</div>
             <div class="activity-count">0 etkinlik</div>
          </div>
          <div class="folder" data-section="physicalProperties">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/persian_6855365.png" alt="folder-icon"/>
             <div class="title">12-Fiziksel Özellikler</div>
             <div class="activity-count">0 etkinlik</div>
           </div>
           <div class="folder" data-section="livingThings">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/owl_8490300.png" alt="folder-icon"/>
             <div class="title">13-Canlılar</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="visualSimilarity">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/racoon_375093.png" alt="folder-icon"/>
             <div class="title">14-Görselde Benzerlik</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
         <div class="folder" data-section="findDifferentImage">
-            <img src="https://img.icons8.com/fluency/100/folder-invoices.png" alt="folder-icon"/>
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" alt="folder-icon"/>
             <div class="title">15-Farklı Resmi Bul</div>
             <div class="activity-count">0 etkinlik</div>
         </div>
     </div>
 
     <div id="examSection" class="hidden">
-        <img class="back-button" src="https://img.icons8.com/fluency/48/back.png" alt="Geri Dön" onclick="goBack()">
+        <img class="back-button" src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/back.png" alt="Geri Dön" onclick="goBack()">
         <ul class="exam-list" id="examList"></ul>
     </div>
 
     <div class="iframe-container hidden" id="iframeContainer">
-        <img class="back-button" src="https://img.icons8.com/fluency/48/back.png" alt="Geri Dön" onclick="goBack()">
+        <img class="back-button" src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/back.png" alt="Geri Dön" onclick="goBack()">
         <iframe id="examFrame" src="" frameborder="0" allowfullscreen></iframe>
     </div>
 
@@ -251,51 +264,52 @@
     <script>
         const exams = {
                          shapeClassification: [
-		{ name: "1", url: "https://wordwall.net/tr/embed/3f03f173e9584c41ab1876cbd6f06e29?themeId=44&templateId=5&fontStackId=0",image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "2", url: "https://wordwall.net/tr/embed/907bda9dcf054626b536c303dded2d08?themeId=1&templateId=5&fontStackId=0",image: "https://img.icons8.com/color/50/test-tube.png" },
+		{ name: "1", url: "https://wordwall.net/tr/embed/3f03f173e9584c41ab1876cbd6f06e29?themeId=44&templateId=5&fontStackId=0",image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/907bda9dcf054626b536c303dded2d08?themeId=1&templateId=5&fontStackId=0",image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
             ],
             shapeAnalysis: [
-       { name: "1", url: "https://wordwall.net/tr/embed/3e9f265aacaf414da37ecb493aa4049b?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-	   { name: "2", url: "https://wordwall.net/tr/embed/bc07e3d96fc140468007da198d186777?themeId=2&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-	{ name: "3", url: "https://wordwall.net/tr/embed/177abe288b1e48e19af38a0d3866d5c5?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-	{ name: "4", url: "https://wordwall.net/tr/embed/40bfadf044194fceb444f84661a99b09?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-	{ name: "5", url: "https://wordwall.net/tr/embed/e4360667b20543b1b60532a5d3702d57?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-    { name: "6", url: "https://wordwall.net/tr/embed/c3afba494d264f2a854b4e672c1b91e6?themeId=44&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+       { name: "1", url: "https://wordwall.net/tr/embed/3e9f265aacaf414da37ecb493aa4049b?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+	   { name: "2", url: "https://wordwall.net/tr/embed/bc07e3d96fc140468007da198d186777?themeId=2&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+	{ name: "3", url: "https://wordwall.net/tr/embed/177abe288b1e48e19af38a0d3866d5c5?themeId=45&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+	{ name: "4", url: "https://wordwall.net/tr/embed/40bfadf044194fceb444f84661a99b09?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+	{ name: "5", url: "https://wordwall.net/tr/embed/e4360667b20543b1b60532a5d3702d57?themeId=45&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+    { name: "6", url: "https://wordwall.net/tr/embed/c3afba494d264f2a854b4e672c1b91e6?themeId=44&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" }
 
             ],
             numberSeries: [
-                { name: "1", url: "https://wordwall.net/tr/embed/d92c3fc80c9c4d42a2a4fb3a9eac0f55?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "2", url: "https://wordwall.net/tr/embed/29b3a7c7865f45c7b15ea3cd1b0806e7?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "3", url: "https://wordwall.net/tr/embed/97e251f2db534663bf83eca2e1ce12ef?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "4", url: "https://wordwall.net/tr/embed/e7f8cde4fbef454f9c3cfcd5ea5b000d?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+                { name: "1", url: "https://wordwall.net/tr/embed/d92c3fc80c9c4d42a2a4fb3a9eac0f55?themeId=45&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/29b3a7c7865f45c7b15ea3cd1b0806e7?themeId=45&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/97e251f2db534663bf83eca2e1ce12ef?themeId=45&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/e7f8cde4fbef454f9c3cfcd5ea5b000d?themeId=45&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" }
             ],
             imageClassification: [
-                { name: "1", url: "https://wordwall.net/tr/embed/29d5c345e8b24f0882fd35413761b865?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "2", url: "https://wordwall.net/tr/embed/09c0b3b043494e0e9dc2f9e9e48cc903?themeId=1&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "3", url: "https://wordwall.net/tr/embed/8baaa243398c40b188f9253e0504dfde?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }],
+                { name: "1", url: "https://wordwall.net/tr/embed/29d5c345e8b24f0882fd35413761b865?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/09c0b3b043494e0e9dc2f9e9e48cc903?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/8baaa243398c40b188f9253e0504dfde?themeId=45&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" }],
             imageAnalogy: [
-                { name: "1", url: "https://wordwall.net/tr/embed/978ff22b1365470b8d16e9b0dac8d96c?themeId=22&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "2", url: "https://wordwall.net/tr/embed/7bf8cfee894847d795aded3616638c09?themeId=22&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "3", url: "https://wordwall.net/tr/embed/857f41cba2f148f9a38c0c2e7f392666?themeId=22&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "4", url: "https://wordwall.net/tr/embed/e400dc6bab4844a99adae29070560a30?themeId=22&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+                { name: "1", url: "https://wordwall.net/tr/embed/978ff22b1365470b8d16e9b0dac8d96c?themeId=22&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/7bf8cfee894847d795aded3616638c09?themeId=22&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/857f41cba2f148f9a38c0c2e7f392666?themeId=22&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/e400dc6bab4844a99adae29070560a30?themeId=22&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" }
 
             ],
             numberAnalogy: [
-         { name: "1", url: "https://wordwall.net/tr/embed/2565f0fb01954b1e96fe4d747ea100cd?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "2", url: "https://wordwall.net/tr/embed/f852e6145660466d9852978448b115c4?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "3", url: "https://wordwall.net/tr/embed/4e22ad1d64e4457788024f83ddb93653?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "4", url: "https://wordwall.net/tr/embed/2c366b110ab14f47ae9932943024e9a7?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+         { name: "1", url: "https://wordwall.net/tr/embed/2565f0fb01954b1e96fe4d747ea100cd?themeId=45&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/f852e6145660466d9852978448b115c4?themeId=45&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/4e22ad1d64e4457788024f83ddb93653?themeId=45&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/2c366b110ab14f47ae9932943024e9a7?themeId=45&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" }
             ],
             numberPuzzle: [
-                { name: "1", url: "https://wordwall.net/tr/embed/e228d6862441484a95f9931f416eb6e1?themeId=44&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "2", url: "https://wordwall.net/tr/embed/0ff6da6704514912be2a3cc132983654?themeId=55&templateId=46&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "3", url: "https://wordwall.net/tr/embed/4d0ced60169c472eae5a8e2f512d3bf6?themeId=46&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "4", url: "https://wordwall.net/tr/embed/125d3532c0dd464bb3402678a983424d?themeId=46&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-		{ name: "5", url: "https://wordwall.net/tr/embed/b255726b5b654ad5bc11344a0b484694?themeId=27&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" },
-        { name: "6", url: "https://wordwall.net/tr/embed/c4c0bc9869754f959ff1747540bc7d0a?themeId=22&templateId=5&fontStackId=21", image: "https://img.icons8.com/color/50/test-tube.png" },{ name: "7", url: "https://wordwall.net/tr/embed/1934e9a68d9c46d591c39b109ccf3980?themeId=52&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+                { name: "1", url: "https://wordwall.net/tr/embed/e228d6862441484a95f9931f416eb6e1?themeId=44&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+		{ name: "2", url: "https://wordwall.net/tr/embed/0ff6da6704514912be2a3cc132983654?themeId=55&templateId=46&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+		{ name: "3", url: "https://wordwall.net/tr/embed/4d0ced60169c472eae5a8e2f512d3bf6?themeId=46&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+		{ name: "4", url: "https://wordwall.net/tr/embed/125d3532c0dd464bb3402678a983424d?themeId=46&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+		{ name: "5", url: "https://wordwall.net/tr/embed/b255726b5b654ad5bc11344a0b484694?themeId=27&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+        { name: "6", url: "https://wordwall.net/tr/embed/c4c0bc9869754f959ff1747540bc7d0a?themeId=22&templateId=5&fontStackId=21", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" },
+{ name: "7", url: "https://wordwall.net/tr/embed/1934e9a68d9c46d591c39b109ccf3980?themeId=52&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" }
             ],
             paperFolding: [
-            { name: "1", url: "https://wordwall.net/tr/embed/92f75a81b3ca44808c1b60bbd35d1040?themeId=45&templateId=5&fontStackId=0", image: "https://img.icons8.com/color/50/test-tube.png" }
+            { name: "1", url: "https://wordwall.net/tr/embed/92f75a81b3ca44808c1b60bbd35d1040?themeId=45&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" }
             ],
             mathematicalOperations: [
               
