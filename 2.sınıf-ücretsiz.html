@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bilsem Sınavları</title>
+    <style>
+        body {
+         font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #ffffff;
+   background-image: url('https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/arka3.png'); /* Arka plana görsel ekleme */
+    background-size: cover; /* Görselin ekranı tamamen kaplamasını sağlar */
+    background-position: center; /* Görselin ortalanmasını sağlar */
+    background-repeat: no-repeat; /* Görselin tekrar etmesini engeller */
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+.icon-container {
+            margin-top: 30px; /* İkon ile başlık arasına boşluk bırak */
+        }
+
+        .icon-container img {
+            width: 100px; /* İkonun boyutunu ayarla */
+            height: 100px; /* İkonun boyutunu ayarla */
+        }
+
+        .folder-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            margin: auto;
+            max-width: 900px;
+        }
+
+        @keyframes swing {
+            0%, 100% { transform: rotate(0deg); }
+            50% { transform: rotate(3deg); }
+        }
+
+        .folder-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 eşit sütun */
+    gap: 30px;
+    padding: 30px;
+    margin: auto;
+    max-width: 900px; /* Gerekirse genişliği ayarla */
+        }
+
+        .folder {
+            height: 120px;
+            position: relative;
+            cursor: pointer;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: folderMove 3s infinite ease-in-out;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .folder img {
+            width: 40px; /* Adjusted for tablet view */
+            height: 40px; /* Adjusted for tablet view */
+        }
+
+        .folder:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .title {
+            font-weight: bold;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+
+        .activity-count {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #FF9800;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 12px;
+        }
+
+        @keyframes folderMove {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(10px); }
+        }
+
+        .back-button {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1000;
+            cursor: pointer;
+            animation: shake 1s infinite;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-3px); }
+            75% { transform: translateX(3px); }
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .exam-list {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .exam-list li {
+            margin: 10px 0;
+        }
+
+        .exam-list button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            transition: transform 0.2s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .exam-list button:hover {
+            transform: scale(1.05);
+        }
+
+        .exam-list img {
+            width: 40px; /* Adjusted for tablet view */
+            height: 40px; /* Adjusted for tablet view */
+            margin-right: 10px;
+        }
+
+        .iframe-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            z-index: 999;
+        }
+
+        .iframe-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="pageTitle">2. Sınıf</h1>
+
+    <div class="folder-container" id="sectionList">
+        <div class="folder" data-section="shapeClassification">
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/beaver_2298445.png" alt="folder-icon"/>
+            <div class="title">1-Şekil Sınıflandırma</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="shapeAnalysis">
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/beaver_375096.png" alt="folder-icon"/>
+            <div class="title">2-Şekil Analizi</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="numberSeries">
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/bee_1864711.png" alt="folder-icon"/>
+            <div class="title">3-Sayı Analojisi</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="imageClassification">
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/british-shorthair-cat_1145728.png" alt="folder-icon"/>
+            <div class="title">4-Kağıt Katlama</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="imageAnalogy">
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/cat_375061.png" alt="folder-icon"/>
+            <div class="title">5-Analoji</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="numberAnalogy">
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_6083377.png" alt="folder-icon"/>
+            <div class="title">6-Analoji</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="numberPuzzle">
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/hamster_616475.png" alt="folder-icon"/>
+            <div class="title">7-Uzlamsal</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="paperFolding">
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/lion_6034064.png" alt="folder-icon"/>
+            <div class="title">8-Şifreleme</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="mathematicalOperations">
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/panda_721254.png" alt="folder-icon"/>
+            <div class="title">9-Matamatiksel İşlemler</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="geometricShapes">
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/penguin_2300566.png" alt="folder-icon"/>
+            <div class="title">10-Geometrik Şekiller</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="spatialRelations">
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/phone-call_434684.png" alt="folder-icon"/>
+            <div class="title">11-Uzamsal İlişkiler</div>
+            <div class="activity-count">0 etkinlik</div>
+         </div>
+         <div class="folder" data-section="physicalProperties">
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/persian_6855365.png" alt="folder-icon"/>
+            <div class="title">12-Fiziksel Özellikler</div>
+            <div class="activity-count">0 etkinlik</div>
+          </div>
+          <div class="folder" data-section="livingThings">
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/owl_8490300.png" alt="folder-icon"/>
+            <div class="title">13-Canlılar</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="visualSimilarity">
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/racoon_375093.png" alt="folder-icon"/>
+            <div class="title">14-Görselde Benzerlik</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+        <div class="folder" data-section="findDifferentImage">
+            <img src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" alt="folder-icon"/>
+            <div class="title">15-Farklı Resmi Bul</div>
+            <div class="activity-count">0 etkinlik</div>
+        </div>
+    </div>
+
+    <div id="examSection" class="hidden">
+        <img class="back-button" src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/back.png" alt="Geri Dön" onclick="goBack()">
+        <ul class="exam-list" id="examList"></ul>
+    </div>
+
+    <div class="iframe-container hidden" id="iframeContainer">
+        <img class="back-button" src="https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/back.png" alt="Geri Dön" onclick="goBack()">
+        <iframe id="examFrame" src="" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <audio id="clickSound" src="https://www.soundjay.com/buttons/sounds/button-3.wav" preload="auto"></audio>
+
+    <script>
+        const exams = {
+                         shapeClassification: [
+		{ name: "1", url: "https://wordwall.net/tr/embed/3f03f173e9584c41ab1876cbd6f06e29?themeId=44&templateId=5&fontStackId=0",image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" }
+            ],
+            shapeAnalysis: [
+       { name: "1", url: "https://wordwall.net/tr/embed/3e9f265aacaf414da37ecb493aa4049b?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" }
+
+            ],
+            numberSeries: [
+                { name: "1", url: "https://wordwall.net/tr/embed/d92c3fc80c9c4d42a2a4fb3a9eac0f55?themeId=45&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" }
+            ],
+            imageClassification: [
+                { name: "1", url: "https://wordwall.net/tr/embed/29d5c345e8b24f0882fd35413761b865?themeId=1&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" }],
+            imageAnalogy: [
+                { name: "1", url: "https://wordwall.net/tr/embed/978ff22b1365470b8d16e9b0dac8d96c?themeId=22&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" }
+
+            ],
+            numberAnalogy: [
+         { name: "1", url: "https://wordwall.net/tr/embed/2565f0fb01954b1e96fe4d747ea100cd?themeId=45&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" }
+            ],
+            numberPuzzle: [
+                { name: "1", url: "https://wordwall.net/tr/embed/e228d6862441484a95f9931f416eb6e1?themeId=44&templateId=5&fontStackId=0", image: "https://raw.githubusercontent.com/zekakuputest/bilsemjunior/main/chameleon_15370295.png" }
+            ],
+            paperFolding: [
+            
+            ],
+            mathematicalOperations: [
+              
+            ],
+            geometricShapes: [
+                
+            ],
+            spatialRelations: [
+               	
+            ],
+            physicalProperties: [
+                
+            ],
+            livingThings: [
+                
+            ],
+            visualSimilarity: [
+               
+            ],
+            findDifferentImage: [
+                
+            ]
+        };
+
+        const clickSound = document.getElementById('clickSound');
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const folders = document.querySelectorAll('.folder');
+            folders.forEach(folder => {
+                const section = folder.getAttribute('data-section');
+                folder.querySelector('.activity-count').textContent = `${exams[section].length} etkinlik`;
+                folder.addEventListener('click', () => {
+                    playClickSound();  // Ses çalma
+                    showExams(section, folder.querySelector('.title').textContent);
+                });
+            });
+        });
+
+        function playClickSound() {
+            clickSound.currentTime = 0; // Sesin başlangıcına git
+            clickSound.play(); // Sesi oynat
+        }
+
+        function showExams(section, sectionName) {
+            document.getElementById('examList').innerHTML = exams[section]
+                .map(exam => `<li><button onclick="loadExam('${exam.url}')"><img src="${exam.image}" alt="exam-icon">${exam.name}</button></li>`)
+                .join('');
+            document.getElementById('pageTitle').innerHTML = '2. Sınıf <br>' + sectionName; // <br> ile alt satıra geç
+            document.getElementById('sectionList').classList.add('hidden');
+            document.getElementById('examSection').classList.remove('hidden');
+        }
+
+        function loadExam(url) {
+            playClickSound(); // Ses çalma
+            document.getElementById('examFrame').src = url;
+            document.getElementById('examSection').classList.add('hidden');
+            document.getElementById('iframeContainer').classList.remove('hidden');
+        }
+
+        function goBack() {
+            playClickSound(); // Ses çalma
+            if (!document.getElementById('examSection').classList.contains('hidden')) {
+                document.getElementById('examSection').classList.add('hidden');
+                document.getElementById('sectionList').classList.remove('hidden');
+                document.getElementById('pageTitle').textContent = '2. Sınıf';
+            } else {
+                document.getElementById('iframeContainer').classList.add('hidden');
+                document.getElementById('examSection').classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
